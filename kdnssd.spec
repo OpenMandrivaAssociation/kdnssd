@@ -1,6 +1,6 @@
 Summary:	DNS-SD Service Discovery Monitor
 Name:		kdnssd
-Version:	4.12.3
+Version:	4.12.4
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -12,8 +12,9 @@ Url:		http://www.kde.org
 %else
 %define ftpdir stable
 %endif
-Source0:	ftp://ftp.kde.org/pub/kde/%{ftpdir}/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	ftp://ftp.kde.org/pub/kde/%{ftpdir}/%{version}/src/zeroconf-ioslave-%{version}.tar.xz
 BuildRequires:	kdelibs4-devel
+Provides:	zeroconf-ioslave = %{EVRD}
 Requires:	nss_mdns
 Conflicts:	kdenetwork4-devel < 3:4.11.0
 
@@ -32,7 +33,7 @@ DNS-SD Service Discovery Monitor.
 #-------------------------------------------
 
 %prep
-%setup -q
+%setup -q -n zeroconf-ioslave-%{version}
 
 %build
 %cmake_kde4
@@ -42,6 +43,10 @@ DNS-SD Service Discovery Monitor.
 %makeinstall_std -C build
 
 %changelog
+* Wed Apr 02 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.12.4-1
+- New version 4.12.4
+- Renamed to zeroconf-ioslave in upstream
+
 * Tue Mar 04 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 3:4.12.3-1
 - New version 4.12.3
 
