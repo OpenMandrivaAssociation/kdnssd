@@ -2,11 +2,12 @@
 %define libname %mklibname KF5DNSSD %{major}
 %define devname %mklibname KF5DNSSD -d
 %define debug_package %{nil}
+%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: kdnssd5
-Version: 5.3.0
+Version: 5.4.0
 Release: 1
-Source0: http://ftp5.gwdg.de/pub/linux/kde/stable/frameworks/%{version}/kdnssd-%{version}.tar.xz
+Source0: http://ftp5.gwdg.de/pub/linux/kde/%{stable}/frameworks/%{version}/kdnssd-%{version}.tar.xz
 Summary: The KDE Frameworks 5 DNSSD library
 URL: http://kde.org/
 License: GPL
