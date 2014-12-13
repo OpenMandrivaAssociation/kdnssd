@@ -5,8 +5,8 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: kdnssd5
-Version: 5.4.0
-Release: 2
+Version: 5.5.0
+Release: 1
 Source0: http://ftp5.gwdg.de/pub/linux/kde/%{stable}/frameworks/%{version}/kdnssd-%{version}.tar.xz
 Summary: The KDE Frameworks 5 DNSSD library
 URL: http://kde.org/
