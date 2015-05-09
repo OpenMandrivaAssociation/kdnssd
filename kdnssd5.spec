@@ -49,7 +49,6 @@ Development files for %{name}.
 %install
 %ninja_install -C build
 mkdir -p %{buildroot}%{_libdir}/qt5
-mv %{buildroot}%{_prefix}/mkspecs %{buildroot}%{_libdir}/qt5/
 
 L="`pwd`/%{name}.lang"
 cd %{buildroot}
