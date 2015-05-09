@@ -5,19 +5,17 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: kdnssd5
-Version: 5.9.0
+Version: 5.10.0
 Release: 1
-Source0: http://ftp5.gwdg.de/pub/linux/kde/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/kdnssd-%{version}.tar.xz
+Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/kdnssd-%{version}.tar.xz
 Summary: The KDE Frameworks 5 DNSSD library
 URL: http://kde.org/
 License: GPL
 Group: System/Libraries
-BuildRequires: cmake
+BuildRequires: cmake(ECM)
 BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: pkgconfig(Qt5X11Extras)
 BuildRequires: pkgconfig(Qt5DBus)
-BuildRequires: qmake5
-BuildRequires: extra-cmake-modules5
 Requires: %{libname} = %{EVRD}
 
 %description
@@ -43,13 +41,13 @@ Development files for %{name}.
 
 %prep
 %setup -q -n kdnssd-%{version}
-%cmake
+%cmake_kde5
 
 %build
-%make -C build
+%ninja -C build
 
 %install
-%makeinstall_std -C build
+%ninja_install -C build
 mkdir -p %{buildroot}%{_libdir}/qt5
 mv %{buildroot}%{_prefix}/mkspecs %{buildroot}%{_libdir}/qt5/
 
