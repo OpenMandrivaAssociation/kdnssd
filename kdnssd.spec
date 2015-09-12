@@ -1,7 +1,7 @@
 Summary:	DNS-SD Service Discovery Monitor
 Name:		kdnssd
 Version:	4.14.3
-Release:	3
+Release:	4
 Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
