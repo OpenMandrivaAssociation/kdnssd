@@ -4,7 +4,7 @@
 %define debug_package %{nil}
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
-Name: kdnssd5
+Name: kdnssd
 Version: 5.17.0
 Release: 1
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/kdnssd-%{version}.tar.xz
@@ -40,7 +40,7 @@ Development files for %{name}.
 %{name} is the KDE Frameworks 5 DNSSD abstraction library.
 
 %prep
-%setup -q -n kdnssd-%{version}
+%setup -q
 %cmake_kde5
 
 %build

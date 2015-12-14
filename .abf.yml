@@ -1,4 +1,3 @@
-removed_sources:
-  kdnssd-5.13.0.tar.xz: 29a46bdc3940c2248b8cfcb2931746e4c6baaf82
+---
 sources:
   kdnssd-5.17.0.tar.xz: 89e166ac5883a4ec48ac112f2f42893ef1fea6b7
