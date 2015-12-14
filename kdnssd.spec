@@ -6,7 +6,7 @@
 
 Name: kdnssd
 Version: 5.17.0
-Release: 2
+Release: 3
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/kdnssd-%{version}.tar.xz
 Summary: The KDE Frameworks 5 DNSSD library
 URL: http://kde.org/
@@ -17,7 +17,8 @@ BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: pkgconfig(Qt5X11Extras)
 BuildRequires: pkgconfig(Qt5DBus)
 Requires: %{libname} = %{EVRD}
-%rename kdnssd5
+Obsoletes: kdnssd5 < 5.17.0-3
+Provides: kdnssd5 = 5.17.0-3
 Provides: kdnssd = 3:4.14.3-4
 Obsoletes: kdnssd < 3:4.14.3-4
 
