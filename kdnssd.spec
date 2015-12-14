@@ -17,6 +17,7 @@ BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: pkgconfig(Qt5X11Extras)
 BuildRequires: pkgconfig(Qt5DBus)
 Requires: %{libname} = %{EVRD}
+%rename kdnssd5
 
 %description
 The KDE Frameworks 5 DNSSD abstraction library.
