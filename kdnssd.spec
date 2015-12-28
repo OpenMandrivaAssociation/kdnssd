@@ -6,7 +6,7 @@
 
 Name: kdnssd
 Version: 5.17.0
-Release: 3
+Release: 4
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/kdnssd-%{version}.tar.xz
 Summary: The KDE Frameworks 5 DNSSD library
 URL: http://kde.org/
