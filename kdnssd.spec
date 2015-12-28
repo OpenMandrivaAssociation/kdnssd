@@ -6,13 +6,14 @@
 
 Name: kdnssd
 Version: 5.17.0
-Release: 4
+Release: 5
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/kdnssd-%{version}.tar.xz
 Summary: The KDE Frameworks 5 DNSSD library
 URL: http://kde.org/
 License: GPL
 Group: System/Libraries
 BuildRequires: cmake(ECM)
+BuildRequires: pkgconfig(avahi-core)
 BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: pkgconfig(Qt5X11Extras)
 BuildRequires: pkgconfig(Qt5DBus)
