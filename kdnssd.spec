@@ -16,6 +16,7 @@ BuildRequires: cmake(ECM)
 BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: pkgconfig(Qt5X11Extras)
 BuildRequires: pkgconfig(Qt5DBus)
+BuildRequires: cmake(Qt5Network)
 Requires: %{libname} = %{EVRD}
 Obsoletes: kdnssd5 < 5.17.0-3
 Provides: kdnssd5 = 5.17.0-3
