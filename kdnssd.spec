@@ -19,6 +19,7 @@ BuildRequires: pkgconfig(Qt5X11Extras)
 BuildRequires: pkgconfig(Qt5DBus)
 BuildRequires: cmake(Qt5Network)
 # For QCH format docs
+BuildRequires: doxygen
 BuildRequires: qt5-assistant
 Requires: %{libname} = %{EVRD}
 Obsoletes: kdnssd5 < 5.17.0-3
